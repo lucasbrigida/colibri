@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>🐦 COLIBRI</title>
+    <link rel="stylesheet" href="/stylesheets/colibri.css">
+  </head>
+  <body>
+    <div id="demo">
+      <h1>🐦 Colibri (demo)</h1>
+      <div id="page"></div>
+    </div>
+    
+    <div class="content">
+      <h2>Purpose</h2>
+      <p>Perform the parsing of html pages from other domains. (CORS)</p>
+    </div>
+    
+    <div class="content">
+      <h2>Code</h2>
+      <pre><code>
+      var colibri = new COLIBRI();
+      colibri.open({
+        id: 'page',
+        url:'http://www.weather.com'
+      }, function (page) {
+        console.log(page);
+      })
+      .show();
+      </code></pre>
+    </div>
+    
+    <div class="content">
+      Made with ♥ and very 90s style by <a href="http://github.com/lucasbrigida">Lucas Pereira Brigida</a>.
+    </div>
+    
+    <script src="/javascripts/colibri/colibri.js"></script>
+    <script>
+      var uol = new COLIBRI();
+      uol.open({
+        id: 'page',
+        url:'http://www.weather.com'
+      }, function (page) {
+        console.log(page);
+      })
+      .show();
+    </script>
+  </body>     
+</html>
