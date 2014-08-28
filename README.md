@@ -2,7 +2,14 @@
 
 Perform the parsing of html pages from other domains. (CORS)
 
-##Code
+##Installing
+```bash
+npm install && npm start
+```
+## Demo
+Now, access the [demo](http://localhost:3000/web-crawler.html)
+
+##Example Code
 
 ```javascript
 var colibri = new COLIBRI();
