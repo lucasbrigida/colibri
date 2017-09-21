@@ -1,15 +1,15 @@
-##Purpose
+## Purpose
 
 Perform the parsing of html pages from other domains. (CORS)
 
-##Installing
+## Installing
 ```bash
 npm install && npm start
 ```
 ## Demo
-Now, access the [demo](http://desolate-lowlands-5734.herokuapp.com/)
+Now, access the [demo](https://colibri-web-proxy.herokuapp.com)
 
-##Example Code
+## Example Code
 
 ```javascript
 var colibri = new COLIBRI();
