@@ -19,6 +19,9 @@ function scrape(options) {
 // GET /scraper
 function index(req, res) {
   'use strict';
+
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   
   //Check 'url' parameter
   if (!req.query.url) {
