@@ -8,7 +8,7 @@ function scrape(options) {
   
   var defer = Q.defer();
   
-  request(options.url, function (err, res, body) {
+  request(options, function (err, res, body) {
     if (err) { return defer.reject(err); }
     if (res.statusCode === 200) { return defer.resolve(body); }
   });
@@ -34,7 +34,12 @@ function index(req, res) {
     });
   }
   
-  scrape({url: req.query.url}).then(function (body) {
+  scrape({
+	url: req.query.url,
+	headers: {
+	  'User-Agent': req.headers['user-agent']
+	}
+  }).then(function (body) {
     res.set('Content-Type', 'text/html');
     res.send(body);
   });
